@@ -1,0 +1,122 @@
+html, body {
+    background-color: #334155;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    text-align:center;
+    font-size: 16px;
+    font-family:'Courier New', Courier, monospace;
+    line-height: 1.6;
+    text-align: justify;
+    overflow-y:scroll;
+  }
+
+  #game {
+    font-size:80pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  #info {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  #name {
+    line-height: 2em;
+    font-size:20pt;
+    width:400px;
+    text-align:center;
+    margin:auto;
+  }
+
+  #play {
+    width: 150px;
+    height: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#334155;
+    font-size: 15pt;
+    background-color:rgb(255, 225, 116);
+    margin:auto;
+  }
+
+  #understood {
+    width: 150px;
+    height: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#334155;
+    font-size: 15pt;
+    background-color:rgb(255, 225, 116);
+    text-align: center;
+  }
+  
+  h1 {
+    font-size:70px;
+    color: rgb(255, 225, 116);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+  }
+
+  h2 {
+    font-size:40px;
+    color: #f9a8d4;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size:40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #334155;
+    text-align: center;
+  }
+
+  .rules {
+    height: 550px;
+    margin:auto;
+    width: 500px;
+    border-top: 20px solid #89cff0;
+    border-right: 80px solid #89cff0;
+    border-left: 80px solid #89cff0;
+    border-bottom: 80px solid #89cff0;
+    text-align: left;
+    background-color: #89cff0;    
+  }
+
+  .welcome {
+    text-align:center;
+  }
+  
+  .flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:-20px;
+  }
+
+  .settings {
+    width:300px;
+    height: 720px;
+    background-color: white;
+    margin-left: 10px;
+    padding: 20px;
+    font-size: 30px;
+    align-self: center;
+  }
+
+  #table TR TD {
+    background-color: black;
+    border:1px solid white;
+    width:45px;
+    height:45px;
+    color:black;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #table TR TD.explosive {
+    background-color: red;
+  }
+
+  #table TR TD.changecolor {
+    background-color: green;
+  }
+
