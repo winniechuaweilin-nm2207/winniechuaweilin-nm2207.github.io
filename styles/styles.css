@@ -40,12 +40,34 @@ html, body {
 
   #understood {
     width: 150px;
-    height: 50px;
+    height: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:#334155;
     font-size: 15pt;
     background-color:rgb(255, 225, 116);
     text-align: center;
+  }
+
+  #music {
+    width: 100px;
+    height: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#334155;
+    font-size: 12pt;
+    background-color:rgb(255, 225, 116);
+    text-align: center;
+    vertical-align:text-bottom;
+  }
+
+  #playagain {
+    width: 100px;
+    height: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#334155;
+    font-size: 12pt;
+    background-color:rgb(255, 225, 116);
+    text-align: center;
+    vertical-align:text-bottom;
   }
   
   h1 {
@@ -87,29 +109,65 @@ html, body {
   
   .flexbox {
     display: flex;
-    flex-direction: row;
+    flex-wrap: row;
     justify-content: center;
     margin:-20px;
   }
 
-  .settings {
+  .flagcount {
     width:300px;
-    height: 490px;
-    background-color: white;
+    height: 75px;
+    background-color: black;
+    border: 1px solid white;
     margin-left: 10px;
     padding: 20px;
-    font-size: 30px;
+    font-size: 40px;
     align-self: center;
+    text-align: center;
+    color: rgb(255, 225, 116);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  #count {
+    font-size: 40px;
+    color: #f9a8d4;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+  }
+
+  .settings {
+    width:260px;
+    height: 365px;
+    background-color: black;
+    border: 1px solid white;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 40px;
+    font-size: 40px;
+    align-self: center;
+    text-align: left;
+    color: rgb(255, 225, 116);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  #timer {
+    font-size: 40px;
+    color: #f9a8d4;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
   }
 
   #table TR TD {
-    background-color: black;
     border:1px solid white;
     width:30px;
     height:30px;
     color:black;
     text-align: center;
     font-weight: bold;
+  }
+
+  #table TR TD.black {
+    background-color: black;
   }
 
   #table TR TD.explosive {
@@ -120,3 +178,6 @@ html, body {
     background-color: green;
   }
 
+  #table TR TD.suspectbomb {
+    background-color: orange;
+  }
