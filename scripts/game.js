@@ -292,7 +292,7 @@ function chooseCell(select) {
         }
     } else {
         showBombLocation();
-        showCells();
+        //showCells();
         setTimeout(function (){
              window.alert("CHIKABOOM! Sorry " + localStorage.getItem("saveName") + ", you lost. Try harder next time!");
         },10);
