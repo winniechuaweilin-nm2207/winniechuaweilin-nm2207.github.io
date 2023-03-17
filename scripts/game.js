@@ -32,9 +32,9 @@ window.onload = function showTable() {
 //allocate bombs to cells randomly
 function insertBombs() {
     for (let i=0; i<50; i++) {
-        var row = Math.floor(Math.random() * 15);
-        var col = Math.floor(Math.random() * 20);
-        var cell = table.rows[row].cells[col];
+        let row = Math.floor(Math.random() * 15);
+        let col = Math.floor(Math.random() * 20);
+        let cell = table.rows[row].cells[col];
         // console.log(cell);
             if(cell.getAttribute("bomb")==="safe") {
                 cell.setAttribute("bomb","explode");
@@ -69,9 +69,9 @@ function showCells() {
     }
 }
 
-let countflag = 0;
-let flagCorrect = 0;
-//right click to demark potential "bombs"
+var countflag = 0;
+var flagCorrect = 0;
+//right click to demarcate potential "bombs"
 function plantFlag(select) {
     if (select.className === "black" && countflag < 50){
         select.className = "suspectbomb";
@@ -81,7 +81,7 @@ function plantFlag(select) {
         //count correct bomb location
         if(select.getAttribute("bomb") === "explode") {
             flagCorrect += 1;
-            console.log(flagCorrect);
+            // console.log(flagCorrect);
         }
         //check if player won
         if(flagCorrect === 50) {
@@ -105,7 +105,7 @@ function plantFlag(select) {
         document.getElementById("count").innerHTML = "Bomb Count: " + countflag;
         if(select.getAttribute("bomb") === "explode") {
             flagCorrect -= 1;
-            console.log(flagCorrect);
+            // console.log(flagCorrect);
         }
     }  
 }
@@ -126,7 +126,7 @@ function chooseCell(select) {
     if (select.getAttribute("bomb") === "safe") {
         //show number of bombs around the cell
         if (r-1 >= 0 && r+1 < 15 && c-1 >= 0 && c+1 < 20) {
-            var count = 0
+            let count = 0
             //top
             if(table.rows[r-1].cells[c].getAttribute("bomb") === "explode") {
                 count += 1;
@@ -155,7 +155,7 @@ function chooseCell(select) {
             table.rows[r].cells[c].innerHTML = count;
         } //code for left column of playing field
         if (r-1 >= 0 && r+1 < 15 && c-1 == -1 && c+1 < 20) {
-            var count = 0
+            let count = 0
             //top
             if(table.rows[r-1].cells[c].getAttribute("bomb") === "explode") {
                 count += 1;
@@ -175,7 +175,7 @@ function chooseCell(select) {
             table.rows[r].cells[c].innerHTML = count;
         } //code for right column of playing field
         if (r-1 >= 0 && r+1 < 15 && c-1 >= 0 && c+1 == 20) {
-            var count = 0
+            let count = 0
             //top
             if(table.rows[r-1].cells[c].getAttribute("bomb") === "explode") {
                 count += 1;
@@ -195,7 +195,7 @@ function chooseCell(select) {
             table.rows[r].cells[c].innerHTML = count;
         } //code for top row of playing field
         if (r-1 == -1 && r+1 < 15 && c-1 >= 0 && c+1 < 20) {
-            var count = 0
+            let count = 0
             //bottom
             if(table.rows[r+1].cells[c].getAttribute("bomb") === "explode") {
                 count += 1;
@@ -215,7 +215,7 @@ function chooseCell(select) {
             table.rows[r].cells[c].innerHTML = count;
         } //code for bottom row of playing field
         if (r-1 >= 0 && r+1 == 15 && c-1 >= 0 && c+1 < 20) {
-            var count = 0
+            let count = 0
             //top
             if(table.rows[r-1].cells[c].getAttribute("bomb") === "explode") {
                 count += 1;
@@ -235,7 +235,7 @@ function chooseCell(select) {
             table.rows[r].cells[c].innerHTML = count;
         } //hardcode for top left of playing field
         if (r-1 == -1 && c-1 == -1) {
-            var count = 0
+            let count = 0
             //bottom
             if(table.rows[r+1].cells[c].getAttribute("bomb") === "explode") {
                 count += 1;
@@ -249,7 +249,7 @@ function chooseCell(select) {
             table.rows[r].cells[c].innerHTML = count;
         } //hardcode for top right of playing field
         if (r-1 == -1 && c+1 == 20) {
-            var count = 0
+            let count = 0
             //bottom
             if(table.rows[r+1].cells[c].getAttribute("bomb") === "explode") {
                 count += 1;
@@ -263,7 +263,7 @@ function chooseCell(select) {
             table.rows[r].cells[c].innerHTML = count;
         } //hardcode for bottom left of playing field
         if (r+1 == 15 && c-1 == -1) {
-            var count = 0
+            let count = 0
             //top
             if(table.rows[r-1].cells[c].getAttribute("bomb") === "explode") {
                 count += 1;
@@ -277,7 +277,7 @@ function chooseCell(select) {
             table.rows[r].cells[c].innerHTML = count;
         } //hardcode for bottom right of playing field
         if (r+1 == 15 && c+1 == 20) {
-            var count = 0
+            let count = 0
             //top
             if(table.rows[r-1].cells[c].getAttribute("bomb") === "explode") {
                 count += 1;
