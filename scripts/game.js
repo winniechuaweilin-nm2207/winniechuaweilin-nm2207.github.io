@@ -57,6 +57,18 @@ function showBombLocation() {
     }
 }
 
+//show cells
+function showCells() {
+    for (let r=0; r<15; r++) {
+        for (let c=0; c<20; c++) {
+            let cell = table.rows[r].cells[c];
+            if (cell.getAttribute("open") === "false" && cell.getAttribute("bombs") !== "explode") {
+                chooseCell(cell);
+            }
+        }
+    }
+}
+
 let countflag = 0;
 let flagCorrect = 0;
 //right click to demark potential "bombs"
@@ -73,6 +85,7 @@ function plantFlag(select) {
         }
         //check if player won
         if(flagCorrect === 50) {
+            showCells();
             setTimeout(function(){
                 window.alert("Congrats " + localStorage.getItem("saveName") + ", you saved the Universe in " + time + "s! Proud of you buddy!");
             },10);
@@ -279,6 +292,7 @@ function chooseCell(select) {
         }
     } else {
         showBombLocation();
+        showCells();
         setTimeout(function (){
              window.alert("CHIKABOOM! Sorry " + localStorage.getItem("saveName") + ", you lost. Try harder next time!");
         },10);
