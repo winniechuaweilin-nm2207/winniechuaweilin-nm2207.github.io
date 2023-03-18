@@ -183,6 +183,7 @@ html, body {
   }
 
   #documents {
+    color:white;
     margin: 100px;
     text-align: left;
     font-size: 30px;
