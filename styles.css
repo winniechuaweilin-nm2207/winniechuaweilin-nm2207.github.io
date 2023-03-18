@@ -181,3 +181,9 @@ html, body {
   #table TR TD.suspectbomb {
     background-color: orange;
   }
+
+  #documents {
+    margin: 100px;
+    text-align: left;
+    font-size: 30px;
+  }
