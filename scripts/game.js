@@ -27,7 +27,9 @@ window.onload = function showTable() {
     }
     insertBombs();
     startTimer();
+    musicControl();
 }
+
 
 //allocate bombs to cells randomly
 function insertBombs() {
@@ -89,6 +91,9 @@ function plantFlag(select) {
             setTimeout(function(){
                 window.alert("Congrats " + localStorage.getItem("saveName") + ", you saved the Universe in " + time + "s! Proud of you buddy!");
             },10);
+            musicPlaying = true;
+            musicControl();
+            document.getElementById("music").removeAttribute("onclick");
             stopTimer();
             for (let r=0; r<15; r++) {
                 for (let c=0; c<20; c++) {
@@ -297,6 +302,9 @@ function chooseCell(select) {
              window.alert("CHIKABOOM! Sorry " + localStorage.getItem("saveName") + ", you lost. Try harder next time!");
         },10);
         stopTimer();
+        musicPlaying = true;
+        musicControl();
+        document.getElementById("music").removeAttribute("onclick");
         for (let r=0; r<15; r++) {
             for (let c=0; c<20; c++) {
                 let cell = table.rows[r].cells[c];
@@ -422,4 +430,23 @@ function stopTimer() {
     return time;
 }
 
+//restart game
+function restartGame() {
+    window.location.reload();
+}
 
+//creating boolean to track state of music
+var musicPlaying = false;
+
+//play or pause music
+function musicControl() {
+    //muted="muted"
+    if (musicPlaying === false) {
+        document.getElementById("gameMusic").play();
+        musicPlaying = true;
+    } else {
+        document.getElementById("gameMusic").pause();
+        musicPlaying = false;
+    }
+   //console.log(musicPlaying); 
+}
