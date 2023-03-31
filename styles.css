@@ -1,5 +1,6 @@
 html, body {
-    background-color: #334155;
+    background-image: url("resources/space3.jpeg");
+    background-size:cover;
     margin: 0;
     height: 100%;
     overflow: hidden;
@@ -34,7 +35,7 @@ html, body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:#334155;
     font-size: 15pt;
-    background-color:rgb(255, 225, 116);
+    background-color:rgb(208, 226, 253);
     margin:auto;
   }
 
@@ -44,7 +45,7 @@ html, body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:#334155;
     font-size: 15pt;
-    background-color:rgb(255, 225, 116);
+    background-color:rgb(208, 226, 253);
     text-align: center;
   }
 
@@ -54,7 +55,7 @@ html, body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:#334155;
     font-size: 12pt;
-    background-color:rgb(255, 225, 116);
+    background-color:rgb(208, 226, 253);
     text-align: center;
     vertical-align:text-bottom;
   }
@@ -65,21 +66,21 @@ html, body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:#334155;
     font-size: 12pt;
-    background-color:rgb(255, 225, 116);
+    background-color:rgb(208, 226, 253);
     text-align: center;
     vertical-align:text-bottom;
   }
   
   h1 {
     font-size:70px;
-    color: rgb(255, 225, 116);
+    color: rgb(250, 230, 160);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
   }
 
   h2 {
     font-size:40px;
-    color: #f9a8d4;
+    color: rgb(237, 217, 250);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
   }
@@ -91,16 +92,24 @@ html, body {
     text-align: center;
   }
 
+  h4 {
+    font-size:40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(240, 224, 251);
+    text-align: center;
+    line-height: 0px;
+  }
+
   .rules {
     height: 550px;
     margin:auto;
     width: 500px;
-    border-top: 20px solid #89cff0;
-    border-right: 80px solid #89cff0;
-    border-left: 80px solid #89cff0;
-    border-bottom: 80px solid #89cff0;
+    padding-top:50px;
+    padding-left:80px;
+    padding-right:80px;
+    padding-bottom:80px;
     text-align: left;
-    background-color: #89cff0;    
+    background-color: rgba(240, 224, 251, 0.7);  
   }
 
   .welcome {
@@ -132,20 +141,19 @@ html, body {
   .flagcount {
     width:300px;
     height: 75px;
-    background-color: black;
-    border: 1px solid white;
+    background-color:rgba(51, 65, 85, 0.6);
+    border: 2px solid white;
     margin-left: 10px;
     padding: 20px;
     font-size: 40px;
     align-self: center;
     text-align: center;
-    color: rgb(255, 225, 116);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
   #count {
     font-size: 40px;
-    color: #f9a8d4;
+    color: rgb(240, 224, 251);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
   }
@@ -153,21 +161,22 @@ html, body {
   .settings {
     width:260px;
     height: 365px;
-    background-color: black;
-    border: 1px solid white;
+    background-color:rgba(51, 65, 85, 0.6);
+    border: 2px solid white;
     margin-top: 10px;
     margin-left: 10px;
     padding: 40px;
     font-size: 40px;
+    line-height: 80px;
     align-self: center;
     text-align: left;
-    color: rgb(255, 225, 116);
+    color: rgb(240, 224, 251);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
   #timer {
     font-size: 40px;
-    color: #f9a8d4;
+    color: rgb(237, 217, 250);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: left;
   }
@@ -193,13 +202,15 @@ html, body {
     background-color: green;
   }
 
-  #table TR TD.suspectbomb {
-    background-color: orange;
-  }
-
   #documents {
     color:white;
     margin: 100px;
     text-align: left;
     font-size: 30px;
+  }
+
+  #character {
+    font-size: 60px;
+    position: absolute;
+    transform: translate(-50%,-50%);
   }

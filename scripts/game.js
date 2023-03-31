@@ -54,12 +54,13 @@ function showBombLocation() {
             let cell = table.rows[r].cells[c];
             if (cell.getAttribute("bomb") === "explode") {
                 cell.className = "explosive";
+                cell.innerHTML = "💣";
             }
         }
     }
 }
 
-//show cells
+//show all cells
 function showCells() {
     for (let r=0; r<15; r++) {
         for (let c=0; c<20; c++) {
@@ -75,8 +76,8 @@ var countflag = 0;
 var flagCorrect = 0;
 //right click to demarcate potential "bombs"
 function plantFlag(select) {
-    if (select.className === "black" && countflag < 50){
-        select.className = "suspectbomb";
+    if (select.innerHTML === "" && countflag < 50){
+        select.innerHTML = "⚠️";
         select.setAttribute("open", "true");
         countflag += 1;
         document.getElementById("count").innerHTML = "Bomb Count: " + countflag;
@@ -99,12 +100,13 @@ function plantFlag(select) {
                 for (let c=0; c<20; c++) {
                     let cell = table.rows[r].cells[c];
                     cell.removeEventListener("click", selectCell);
+                    cell.removeEventListener('contextmenu', rightClickCell);
                 }
             }
         }
     } 
-    else if (select.className === "suspectbomb" && flagCorrect !== 50) {
-        select.className = "black";
+    else if (select.innerHTML === "⚠️" && flagCorrect !== 50) {
+        select.innerHTML = "";
         select.setAttribute("open", "false");
         countflag -= 1;
         document.getElementById("count").innerHTML = "Bomb Count: " + countflag;
@@ -123,7 +125,7 @@ function chooseCell(select) {
     } else {
         select.setAttribute("open","true");
     }
-    select.className="changecolor";
+     select.className="changecolor";
         let r = select.parentNode.rowIndex;
         let c = select.cellIndex;
         // console.log(r);
@@ -309,6 +311,7 @@ function chooseCell(select) {
             for (let c=0; c<20; c++) {
                 let cell = table.rows[r].cells[c];
                 cell.removeEventListener("click", selectCell);
+                cell.removeEventListener('contextmenu', rightClickCell);
             }
         }
     }
@@ -448,5 +451,18 @@ function musicControl() {
         document.getElementById("gameMusic").pause();
         musicPlaying = false;
     }
-   //console.log(musicPlaying); 
+   //console.log(musicPlaying);
 }
+
+//astronaut follow cursor
+
+
+document.addEventListener('mousemove',function(e) {
+    let astronaut= document.getElementById("character");
+    let left= e.offsetX;
+    let top= e.offsetY;
+    astronaut.style.left = e.pageX + 45 + 'px';
+    astronaut.style.top = e.pageY + 45 + 'px';
+})
+    
+   
