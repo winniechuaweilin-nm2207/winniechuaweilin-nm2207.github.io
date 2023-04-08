@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Space Defuser</title>
+        <meta charset="UTF-8">
+        <script src="scripts/gamec.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="#">
+    </head>
+    <body>
+        <h1>Space Defuser 💣</h1>
+        <div id="character">🚀</div>
+        <div class="flexbox">
+            <table id="table" oncontextmenu="return false;"></table>
+            <div class="sidebar">    
+                <div class="flagcount">
+                    <div id="count">Bomb Count: 0</div>
+                </div>
+                <audio loop id="gameMusic">
+                    <source src="resources/CyborgNinja.mp3" type="audio/ogg" autoplay="autoplay"></audio>
+                    <source src="resources/CyborgNinja.mp3" type="audio/mpeg"></audio>
+                <div class="settings">
+                    <h4>⚙️ Settings 🛠️</h4>
+                    Restart: <input type="button" id="playagain" value="restart game" onClick="restartGame()">
+                    <div id="timer"> 000 </div>
+                    Music: <input type="button" id="music" value="play/pause" onClick="musicControl()">
+
+                </div>
+            </div>
+        </div>
+    </body>

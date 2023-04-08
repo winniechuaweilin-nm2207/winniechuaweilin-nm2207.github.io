@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Space Defuser</title>
+        <script src="scripts/intro.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1 id="welcome">Welcome</h1>
+        <div class="rules">
+            <h3>Leisure Mode: How to Play?</h3>
+            Objective: Locate 50 randomly-placed "bombs" in the shortest possible time.<br><br>
+            Players are to identify "safe" squares while avoiding the squares with bombs. If the player clicks on a bomb, the game ends. Otherwise, a number between 0 and 8 is displayed, which identifies the total number of bombs present in the eight neighboring squares. A square suspected of containing a bomb may be marked with a "danger sign" by a right-click. Player wins the game if all the squares with bombs are marked with a "danger sign".<br><br>
+            <input type="button" id="understood" value="Got It!" onClick="playLeisureGame();showTable()">
+        </div>
+    </body>

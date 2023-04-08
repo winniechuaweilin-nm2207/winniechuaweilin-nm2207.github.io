@@ -8,16 +8,31 @@ function buttonClicked() {
     if(typedName == ""){
         window.alert("Please enter your name.");
     } else {
-        window.location.href = "indexinstructions.html";
+        window.location.href = "indexchoosemode.html";
     }    
 }
+
+//proceed to competitive instructions
+function buttonCompetitive() {
+    window.location.href = "indexcompetitiveinstructions.html";
+}
+
+//proceed to leisure instructions
+function buttonLeisure() {
+    window.location.href = "indexleisureinstructions.html";
+}
     
-//retrive player's name
+//retrive player's name in instructions
 window.onload = function playerNameUpdate() {
     document.getElementById("welcome").innerHTML = "Hello " + localStorage.getItem("saveName") + ", Welcome to Space Defuser!";
 }
 
-//proceed to game
-function playGame() {
-    window.location.href = "indexgame.html";
+//proceed to competitive game
+function playCompetitiveGame() {
+    window.location.href = "indexcompetitivegame.html";
+}
+
+//proceed to leisure game
+function playLeisureGame() {
+    window.location.href = "indexleisuregame.html";
 }
