@@ -463,4 +463,7 @@ document.addEventListener('mousemove',function(e) {
     astronaut.style.top = e.pageY + 45 + 'px';
 })
     
-   
+//proceed to competitive instructions
+function buttonCompetitive() {
+    window.location.href = "indexcompetitiveinstructions.html";
+}

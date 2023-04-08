@@ -483,4 +483,7 @@ document.addEventListener('mousemove',function(e) {
     astronaut.style.top = e.pageY + 45 + 'px';
 })
     
-   
+//proceed to leisure instructions
+function buttonLeisure() {
+    window.location.href = "indexleisureinstructions.html";
+}
