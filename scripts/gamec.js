@@ -474,13 +474,13 @@ function musicControl() {
    //console.log(musicPlaying);
 }
 
-//astronaut follow cursor
+//rocket follow cursor
 document.addEventListener('mousemove',function(e) {
-    let astronaut= document.getElementById("character");
+    let rocket= document.getElementById("character");
     let left= e.offsetX;
     let top= e.offsetY;
-    astronaut.style.left = e.pageX + 45 + 'px';
-    astronaut.style.top = e.pageY + 45 + 'px';
+    rocket.style.left = e.pageX + 45 + 'px';
+    rocket.style.top = e.pageY + 45 + 'px';
 })
     
 //proceed to leisure instructions
